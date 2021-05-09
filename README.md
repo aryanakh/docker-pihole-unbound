@@ -1,4 +1,4 @@
-# Pi-Hole + Unbound on Docker
+# Pi-Hole + Unbound on Docker - Modified to allow Unraid SSL Certificates and DNS Resolution
 
 ### Use Docker to run [Pi-Hole](https://pi-hole.net) with an upstream [Unbound](https://nlnetlabs.nl/projects/unbound/about/) resolver.
 
