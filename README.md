@@ -1,19 +1,10 @@
 # Pi-Hole + Unbound on Docker - For Use in Networks with Unraid Servers  
 
+This Docker deployment runs both Pi-Hole and Unbound in a single container. This configuration contacts the DNS root servers directly, please read the Pi-Hole docs on [Pi-hole as All-Around DNS Solution](https://docs.pi-hole.net/guides/unbound/) to understand what this means. With this approach, we can also simply our networking since `macvlan` is no longer necessary.
 
 ###Modified to allow Unraid SSL Certificates and DNS Resolution
 
 ### Use Docker to run [Pi-Hole](https://pi-hole.net) with an upstream [Unbound](https://nlnetlabs.nl/projects/unbound/about/) resolver.
-
-Install Unbound directly into the Pi-Hole container
-  - This configuration contacts the DNS root servers directly, please read the Pi-Hole docs on [Pi-hole as All-Around DNS Solution](https://docs.pi-hole.net/guides/unbound/) to understand what this means.
-  - With this approach, we can also simply our networking since `macvlan` is no longer necessary.
-
-# Pi-Hole + Unbound - 1 Container
-
-## Description
-
-This Docker deployment runs both Pi-Hole and Unbound in a single container. 
 
 The base image for the container is the [official Pi-Hole container](https://hub.docker.com/r/pihole/pihole), with an extra build step added to install the Unbound resolver directly into to the container based on [instructions provided directly by the Pi-Hole team](https://docs.pi-hole.net/guides/unbound/).
 
